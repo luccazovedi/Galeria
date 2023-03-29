@@ -15,7 +15,7 @@ Lucca Zovedi
 - HMTL
 
 ## Visualização:
-[Live Preview]
+[Live Preview](https://luccazovedi.github.io/Galeria/)
 
 ## Editor:
 [StackBlitz](https://stackblitz.com/)
