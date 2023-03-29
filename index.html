@@ -6,8 +6,12 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
       />
-      <link rel="icon" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F638526053409190345%2F&psig=AOvVaw1lkAJi1W_UT-DEjc_MeSP2&ust=1680206312324000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNCo2fH1gf4CFQAAAAAdAAAAABAE" type="image/png">
-      <link rel="stylesheet" href="style.css">
+      <link
+        rel="icon"
+        href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.pinterest.com%2Fpin%2F638526053409190345%2F&psig=AOvVaw1lkAJi1W_UT-DEjc_MeSP2&ust=1680206312324000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNCo2fH1gf4CFQAAAAAdAAAAABAE"
+        type="image/png"
+      />
+      <link rel="stylesheet" href="style.css" />
       <title>Álbum</title>
     </head>
     <body>
@@ -17,6 +21,27 @@
         <button id="carregar-mais">Carregar Mais!</button>
       </div>
     </body>
-    <script src="index.js"></script>
+    <script src="index.js">
+
+      const galeria = document.getElementById('galeria');
+      const quantidadeImagensIniciais = 1;
+      let controle = 0;
+      const carregarMais = document.getElementById('carregar-mais');
+      for (let i = 0; i < quantidadeImagensIniciais; i++) {
+      galeria.innerHTML += `<img src="https://picsum.photos/400/250?random=+i+" />`;
+      }
+      carregarMais.addEventListener('click', () => {
+      for (let i = 0; i < quantidadeImagensIniciais; i++) {
+        const image = document.createElement('img');
+        image.src = `https://picsum.photos/400/250?random=${controle}`;
+        carregarMais.innerHTML = 'carregando...';
+        image.addEventListener('load', () => {
+          carregarMais.innerHTML = 'Carregar Mais!';
+        });
+        galeria.appendChild(image);
+        controle++;
+      }
+      });
+    </script>
   </html>
 </div>
