@@ -1,3 +1,21 @@
-# galeria-webview
+# Galeria WebView
+Projeto simples, criado a partir das aulas do curso Danki Code, com a utilização de 
+uma API de imagens para a criação de uma galeria.
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-xplaxr)
+A ideia é que cada vez que o usuário clique no botão da página, uma nova imagem apareça, 
+criando uma espécie de galeria.
+
+## Autor:
+Lucca Zovedi
+
+## Tecnologias:
+- React
+- Javascript
+- CSS
+- HMTL
+
+## Visualização:
+[Live Preview]
+
+## Editor:
+[StackBlitz](https://stackblitz.com/)
